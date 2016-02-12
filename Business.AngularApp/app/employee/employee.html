@@ -1,0 +1,46 @@
+﻿<section class="mainbar" data-ng-controller="employee as vm">
+    <section class="matter">
+        <div class="container-fuild">
+            <div class="row-fluid">
+                <div class="form-search">
+              
+                    <div class="btn-group pull-right">
+                      
+                        <a class="btn btn-info"
+                           href="#/employee/new"><i class="glyphicon glyphicon-plus"></i><span>Add Employee</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"
+                         subtitle="{{vm.employees.length}}"
+                         ></div>
+
+                    <div class="widget-content user">
+                        <div class="padd  fader-animation"
+                             data-ng-repeat="emp in vm.employees"
+                             data-ng-click="vm.gotoEmployee(emp)">
+                            <div class="user">
+                                
+                                <div class="user-details" title="Go to employee details">
+                                    <small>Employment ID {{emp.EmployeeID}}</small><br />
+                                    <small class="hidden-phone">{{emp.Name}} </small><br />
+                                    <small class="hidden-phone">{{emp.Address}} </small><br />
+                                    <small class="hidden-phone">Age {{emp.Age}}</small>
+                                    <small class="hidden-phone">Employment {{emp.Employment}}</small>
+                                    <small class="hidden-phone">Active {{emp.Active }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                       
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
